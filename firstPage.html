@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Welcome to my personal website!
+		</title>
+	<link rel="stylesheet"
+		type="text/css"
+		href="bootstrap.css"
+	/>
+	<!-- <link rel="stylesheet"
+		type="text/css"
+		href="styles.css"
+	/> -->
+
+	<script 
+		src="jquery-3.3.1.min.js">
+	</script>
+
+	<!-- here we create our own -->
+
+	</head>
+
+	<body>
+		<!--<div class="responsive">
+			Top
+		</div>
+		<div class="responsive">
+			Bottom
+		</div> -->
+		<a href="firstPage.html">
+			Home
+		</a>
+		&nbsp;
+		<a href="aboutme.html">
+			About Me
+		</a>
+		&nbsp;
+		<a href="contactDetails.html">
+			Contact me
+		</a>
+		&nbsp;
+		<a href="imageGallery.html">
+			Vacation Photos
+		</a>
+
+		<!--"console.log('I hope you enjoy reading!')"-->
+		<!-- $ is shorthand for jquery, and it is a function
+			#title is a CSS selector - accesses a certain element of the wage page
+			and # means the ID of a particular elemen t
+			$('#title') is an object returned from the $ function and 
+			.html is a function that changes the html body of the element  -->
+		<hr></hr>
+		<h1 id="title" onclick="sayThanks();">
+			My Personal Website
+		</h1>
+
+		<!--<div class="container">
+			<div class="row">
+				<div class="col-md-3 thin_border">
+					Some content here for panel 1
+				</div>
+				<div class="col-md-9 thin_border">
+					Some content here for panel 2
+				</div>
+			</div>
+		</div> -->
+		<a href="self_portrait.png">
+			<img 
+			src="self_portrait.png"
+			width="50%" 
+			/>
+		</a> 
+		<h2>
+			This is me standing near Horseshoe Bend, Arizona
+		</h2>
+	</body>
+
+	<!--$('#title').html('Thanks for visiting!'); -->
+
+	<!-- This is a script tag. Here, we can create our own javascript function and 
+		call it when defining an onclick repsonse in an HTML tag. 
+		function sayThanks() {
+			alert('Thanks for visiting!');
+		};
+	-->
+	<!-- click(function () is an anonymous function, and the function(), which is the argument to click. The body of the anonymous function may or may not be executed depending on whether click calls the anonymous function 
+    
+    **A JQuery function applies to all elements that match the selector
+
+	-->	
+	<script type="text/javascript">
+		function sayThanks() {
+			$("#title").html("Welcome to my personal website!");
+			$("#title").click(function () {
+				$("#title").html("Thanks for visiting!");
+				$("#title").off("click");
+			});
+		};
+	</script>
+
+</html>

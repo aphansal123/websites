@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>
+			Vacation Photos
+		</title>
+		<link 
+			rel="stylesheet"
+			type="text/css"
+			href="bootstrap.css"
+		/>
+
+		<!-- import our own stylesheet -->
+		<link 
+			rel="stylesheet"
+			type="text/css"
+			href="styles.css"
+		/>	
+
+		<!-- import jQuery -->
+		<script 
+			src="jquery-3.3.1.min.js">
+		</script>
+
+	</head>
+	<body>	
+		<a href="firstPage.html">
+			Home
+		</a>
+		&nbsp;
+		<a href="aboutme.html">
+			About Me
+		</a>
+		&nbsp;
+		<a href="contactDetails.html">
+			Contact me
+		</a>
+		&nbsp;
+		<a href="imageGallery.html">
+			Vacation Photos
+		</a>
+
+		<h1>
+			Vacation Photos
+		</h1>
+
+
+		<!--
+		   These are the thumbnail images.
+		   They are laid out using the 
+		   bootstrap grid.
+		   I have given them all the class
+		   "crop-image" which I use in the
+		   css and the javascript code.
+		-->
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-3">
+				<img 
+				     class="crop-img" 
+				     src="vacation_pic_1.jpg" /> 
+			</div> 
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="vacation_pic_2.jpg" /> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				  src="vacation_pic_3.jpg" /> 
+			</div>
+			<div class="col-md-3">
+				<img class="crop-img" 
+				   src="vacation_pic_4.jpg" /> 
+			</div>
+		</div>
+		<!--
+			this is the large image which is
+			on a row of its own. 
+			I will change it source in the 
+			javascript
+		-->
+		&nbsp;
+		<div class="row">
+			<span class="large_indent">
+				<p class="large_gap_below">
+					<div class="col-md-12">
+						<img id="bigImage" 
+						  class="large-img" 
+						  src="vacation_pic_1.png" > 
+					</div>
+				</p>
+			</span>
+		</div>
+	</div>
+
+	<script>
+		// when we click on the thumbnail
+		// we set the src attribute of the 
+		// big image to be the same as the 
+		// src of the image we have clicked on
+		// ("this"). This loads the same
+		// image file into the big image
+		$(".crop-img").click(function(){
+			$("#bigImage").attr('src', 
+				$(this).attr('src'));
+		});
+	</script>
+
+	</body>
+</html>
